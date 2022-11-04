@@ -104,14 +104,15 @@ nav .nav-left {
 
 .hero {
   display: flex;
-  height: 90vh;
+  height: calc(90vh - 4rem);
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .hero-left {
   width: 30rem;
-  animation: animTxtSlide;
+  animation: animLeftSLide;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
 }
@@ -161,7 +162,7 @@ nav .nav-left {
 
 .hero .heroimg {
   align-self: flex-end;
-  animation: animImgSlide;
+  animation: animRightSlide;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
 }
@@ -169,6 +170,7 @@ nav .nav-left {
 footer {
   height: 100vh;
   padding: 5rem;
+  overflow: hidden;
 }
 
 .logos {
@@ -191,10 +193,16 @@ footer {
 
 .footer-bottom img {
   height: 20rem;
+  animation: animLeftSLide;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
 }
 
 .footer-bottom-right {
   width: 30rem;
+  animation: animRightSlide;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
 }
 
 .footer-bottom-right h1 {
@@ -247,7 +255,7 @@ footer {
   }
 }
 
-@keyframes animTxtSlide {
+@keyframes animLeftSLide {
   0% {
     transform: translateX(-150%);
   }
@@ -255,7 +263,7 @@ footer {
     transform: translateX(0);
   }
 }
-@keyframes animImgSlide {
+@keyframes animRightSlide {
   0% {
     transform: translateX(150%);
   }
